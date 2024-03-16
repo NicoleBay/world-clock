@@ -1,0 +1,47 @@
+:root {
+  --title-font: "Playfair Display SC", serif;
+  --body-font: "Lato", sans-serif;
+  --bg-color: #050f11;
+  --primary-color: #5da7ae;
+  --secondary-color: #bca161;
+}
+
+body {
+  font-family: var(--body-font);
+  font-weight: 400;
+  background-color: var(--bg-color);
+}
+
+h1 {
+  font-family: var(--title-font);
+  color: var(--primary-color);
+  font-size: 55px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+footer {
+  color: var(--secondary-color);
+  margin-top: 30px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.container {
+  max-width: 460px;
+  padding: 10px;
+  margin: 60px auto;
+  margin-bottom: 0px;
+  border-radius: 20px;
+  background-color: rgb(235, 234, 233);
+  box-shadow: 4px 4px 10px rgba(235, 234, 233, 0.2);
+}
+
+a {
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+a:hover {
+  color: #ebebeb;
+}
