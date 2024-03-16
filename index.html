@@ -8,13 +8,48 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display+SC:wght@700;900&display=swap"
       rel="stylesheet"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.45/moment-timezone-with-data-1970-2030.js"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>World Clock</title>
   </head>
   <body>
     <div class="container">
-      <h1>World Clock</h1>
+      <h1 id="typewriter"></h1>
+      <select id="city">
+        <option value="">Select a City...</option>
+        <option value="current">My current location</option>
+        <option value="Europe/Paris">Paris</option>
+        <option value="Egypt/Cairo">Cairo</option>
+        <option value="India/Delhi">Delhi</option>
+        <option value="China/Shanghai">Shanghai</option>
+      </select>
+
+      <div id="cities">
+        <div class="city" id="london">
+          <div>
+            <h2>London</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+        <div class="city" id="tokyo">
+          <div>
+            <h2>Tokyo</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+        <div class="city" id="new-york">
+          <div>
+            <h2>New York</h2>
+            <div class="date"></div>
+          </div>
+          <div class="time"></div>
+        </div>
+      </div>
     </div>
 
     <footer>
