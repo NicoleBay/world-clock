@@ -6,6 +6,19 @@ const typewriter = new Typewriter("#typewriter", {
 });
 
 function updateTime() {
+  //New York
+  let newYorkElement = document.querySelector("#new-york");
+  if (newYorkElement) {
+    let newYorkDateElement = newYorkElement.querySelector(".date");
+    let newYorkTimeElement = newYorkElement.querySelector(".time");
+    let newYorkTime = moment().tz("America/New_York");
+
+    newYorkDateElement.innerHTML = newYorkTime.format("Do MMMM YYYY");
+    newYorkTimeElement.innerHTML = newYorkTime.format(
+      "h:mm:ss [<small>] A [</small>]"
+    );
+  }
+
   //London
   let londonElement = document.querySelector("#london");
   if (londonElement) {
@@ -23,21 +36,8 @@ function updateTime() {
     let tokyoTimeElement = tokyoElement.querySelector(".time");
     let tokyoTime = moment().tz("Asia/Tokyo");
 
-    tokyoDateElement.innerHTML = tokyoTime.format("MMMM Do YYYY");
+    tokyoDateElement.innerHTML = tokyoTime.format("Do MMMM YYYY");
     tokyoTimeElement.innerHTML = tokyoTime.format(
-      "h:mm:ss [<small>] A [</small>]"
-    );
-  }
-
-  //New York
-  let newYorkElement = document.querySelector("#new-york");
-  if (newYorkElement) {
-    let newYorkDateElement = newYorkElement.querySelector(".date");
-    let newYorkTimeElement = newYorkElement.querySelector(".time");
-    let newYorkTime = moment().tz("America/New_York");
-
-    newYorkDateElement.innerHTML = newYorkTime.format("MMMM Do YYYY");
-    newYorkTimeElement.innerHTML = newYorkTime.format(
       "h:mm:ss [<small>] A [</small>]"
     );
   }
@@ -55,7 +55,7 @@ function updateCity(event) {
   citiesElement.innerHTML = `<div class="city">
         <div>
           <h2><em>${cityName}</em></h2>
-          <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
+          <div class="date">${cityTime.format("Do MMMM YYYY")}</div>
         </div>
         <div class="time">${cityTime.format(
           "h:mm:ss"
@@ -74,3 +74,4 @@ setInterval(updateTime, 1000);
 
 let citiesSelectElement = document.querySelector("#city");
 citiesSelectElement.addEventListener("change", updateCity);
+console.log(moment.tz.names());
