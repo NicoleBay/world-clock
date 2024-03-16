@@ -3,7 +3,7 @@
   --body-font: "Lato", sans-serif;
   --bg-color: #393e46;
   --primary-color: #050f11;
-  --secondary-color: #d65a31;
+  --secondary-color: #f8da5b;
 }
 
 body {
@@ -45,7 +45,7 @@ footer a {
 }
 
 footer a:hover {
-  color: #ebebeb;
+  color: #ff9500;
 }
 
 h2 {
