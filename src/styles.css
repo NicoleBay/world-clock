@@ -1,9 +1,9 @@
 :root {
   --title-font: "Playfair Display SC", serif;
   --body-font: "Lato", sans-serif;
-  --bg-color: #050f11;
-  --primary-color: #5da7ae;
-  --secondary-color: #bca161;
+  --bg-color: #393e46;
+  --primary-color: #050f11;
+  --secondary-color: #d65a31;
 }
 
 body {
@@ -14,6 +14,7 @@ body {
 
 h1 {
   font-family: var(--title-font);
+  font-weight: 900;
   color: var(--primary-color);
   font-size: 55px;
   line-height: 1.5;
@@ -21,27 +22,105 @@ h1 {
 }
 
 footer {
-  color: var(--secondary-color);
+  color: #ffffff;
   margin-top: 30px;
-  font-size: 13px;
+  font-size: 14px;
   text-align: center;
 }
 
 .container {
   max-width: 460px;
-  padding: 10px;
-  margin: 60px auto;
+  padding: 20px;
+  margin: 30px auto;
   margin-bottom: 0px;
   border-radius: 20px;
   background-color: rgb(235, 234, 233);
-  box-shadow: 4px 4px 10px rgba(235, 234, 233, 0.2);
+  box-shadow: 4px 4px 10px rgba(235, 234, 233, 0.3);
 }
 
-a {
-  color: var(--primary-color);
+footer a {
+  color: var(--secondary-color);
+  font-weight: 700;
+  font-size: 16;
+}
+
+footer a:hover {
+  color: #ebebeb;
+}
+
+h2 {
+  margin: 0;
+  font-family: var(--title-font);
+  font-size: 30px;
   font-weight: 700;
 }
 
-a:hover {
-  color: #ebebeb;
+select {
+  display: block;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 4px;
+  padding: 10px;
+  color: var(--bg-color);
+}
+
+.city {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 20px 0;
+  border-bottom: 1px dashed var(--bg-color);
+}
+
+.city:last-child {
+  border: none;
+  margin-bottom: 0;
+}
+
+.date {
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 400;
+  color: var(--bg-color);
+  opacity: 0.7;
+}
+.time {
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.time small {
+  font-size: 18px;
+  line-height: 35px;
+  vertical-align: middle;
+  color: var(--primary-color);
+}
+
+.homepage {
+  color: var(--primary-color);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 0 0 0 5px;
+}
+
+/* Media Queries */
+@media (max-width: 500px) {
+  h2 {
+    font-size: 25px;
+  }
+  .time {
+    font-size: 20px;
+  }
+  .time small {
+    font-size: 14px;
+  }
+
+  .city {
+    margin: 10px 0;
+    padding: 10px 0;
+  }
+
+  .date {
+    font-size: 14px;
+  }
 }

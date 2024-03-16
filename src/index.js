@@ -13,7 +13,7 @@ function updateTime() {
     let londonTime = londonElement.querySelector(".time");
     let londonEurope = moment().tz("Europe/London");
     londonDate.innerHTML = londonEurope.format("Do MMMM YYYY");
-    londonTime.innerHTML = londonEurope.format("h:mm:ss [<small>]a[</small>]");
+    londonTime.innerHTML = londonEurope.format("h:mm:ss [<small>]A[</small>]");
   }
 
   //Tokyo
@@ -61,6 +61,11 @@ function updateCity(event) {
           "h:mm:ss"
         )} <small>${cityTime.format("A")}</small></div>
       </div>
+       <span >
+          <i class="fa-solid fa-arrow-left"></i>
+          <a href="index.html" class="homepage"> Go back</a>
+        </span>
+     
       `;
 }
 
